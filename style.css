@@ -172,7 +172,6 @@ h1 {
 .button:hover {
     transition: .2s;;
     transform    : scale(1.1) !important;
-    outline:solid 4px var(--black);
     filter:drop-shadow(0 0 5px var(--laf-blue-1));
 }
 .version{

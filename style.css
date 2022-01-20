@@ -1,0 +1,185 @@
+:root {
+    --laf-blue-1: #7BFFF3;
+    --laf-blue-2: #00F0FF;
+    --black     : #111;
+    --white     : #777;
+}
+
+/* font-load */
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    transition : .2s linear;
+}
+
+body {
+    background: var(--white);
+}
+
+header {
+    transition     : 0s linear;
+    width          : 80%;
+    margin         : auto;
+    background     : var(--black);
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : row;
+    flex-wrap      : nowrap;
+    margin-top     : 20px;
+    align-content  : center;
+    padding        : 20px;
+    mask-image     : url(/img/bg.png);
+}
+
+.headerLink {
+    text-align    : center;
+    width         : calc(50% / 4);
+    height        : -webkit-fill-available;
+    padding-top   : 20px;
+    padding-bottom: 20px;
+}
+
+.headerLink a {
+    color      : var(--laf-blue-2);
+    font-size  : 20px;
+    font-weight: 700px;
+}
+
+.tooltips {
+    display      : none;
+    margin-top   : -30px;
+    padding      : 5px;
+    border-radius: 10px;
+    background   : rgba(255, 255, 255, .1);
+    color        : var(--laf-blue-1);
+    font-weight  : 100;
+}
+
+.headerLink:hover .tooltips {
+    display: block;
+}
+
+
+header img {
+    margin-right: auto;
+    margin-left : 20px;
+    height      : 80px;
+}
+
+header:hover img {
+    filter   : drop-shadow(0 0 5px var(--laf-blue-1));
+    animation: spin 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    margin               : auto;
+    width                : 80%;
+    text-align           : center;
+    justify-content      : center;
+    margin-top           : 10%;
+    width                : 400px;
+}
+
+.dl-win {
+    grid-column-start: 1;
+    grid-column-end  : 3;
+    padding          : 30px;
+    background       : var(--laf-blue-2);
+    color            : white;
+    font-weight      : bolder;
+    font-size        : 25px;
+    text-shadow      : 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black), 0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black), 1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black), 0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black), -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black), 1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black), -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+    cursor           : pointer;
+}
+
+.dl-linux,
+.dl-por {
+    padding    : 20px;
+    color      : white;
+    background : var(--laf-blue-1);
+    font-weight: bolder;
+    font-size  : 20px;
+    cursor     : pointer;
+    text-shadow: 0 0 0 var(--black), 1px 0 0 var(--black), -1px 0 var(--black), 0 -1px var(--black), 0 1px var(--black), 1px 1px var(--black), 1px -1px var(--black), -1px 1px var(--black), -1px -1px var(--black), 0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black), -2px 0 var(--black), 1px 2px var(--black), -1px 2px var(--black), 1px -2px var(--black), -1px -2px var(--black), 2px 2px var(--black), -2px 2px var(--black), 2px -2px var(--black), -2px -2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black), 0 0 2px var(--black);
+}
+
+.button {
+    margin   : 10px;
+    animation: scale 2.4s infinite;
+
+
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(0.95);
+    }
+
+    66% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.name {
+    float: left;
+    right: unset;
+    color: white;
+}
+
+h1 {
+    color    : var(--laf-blue-2);
+    font-size: 50px;
+    left     : 50%;
+    position : absolute;
+    transform: translate(-50%);
+    font-weight: bolder;
+    text-shadow:0 0 4px var(--laf-blue-2);
+}
+
+.button:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.button:nth-child(2) {
+    animation-delay: 800ms;
+}
+
+.button:nth-child(3) {
+    animation-delay: 1600ms;
+}
+
+.button:hover {
+    transition: .2s;;
+    transform    : scale(1.1) !important;
+    outline:solid 4px var(--black);
+    filter:drop-shadow(0 0 5px var(--laf-blue-1));
+}
+.version{
+    bottom:0;
+    position: fixed;
+    left:50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    margin-bottom:10px; 
+}
